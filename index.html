@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventure Streetwear</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #09090b;
+      color: white;
+    }
+
+    header {
+      padding: 25px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #27272a;
+      position: sticky;
+      top: 0;
+      background: rgba(9,9,11,0.95);
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #8b5cf6;
+    }
+
+    .cart {
+      background: #8b5cf6;
+      border: none;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #09090b, #1b102b);
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 9vw, 80px);
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      color: #8b5cf6;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      color: #a1a1aa;
+      font-size: 18px;
+    }
+
+    .products {
+      padding: 50px 7%;
+    }
+
+    .products h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #141417;
+      border: 1px solid #27272a;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #8b5cf6;
+    }
+
+    .shirt {
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, #18181b, #24143d);
+      font-size: 80px;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #a1a1aa;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .buy {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 10px;
+      background: #8b5cf6;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .buy:hover {
+      background: #7c3aed;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #27272a;
+      color: #71717a;
+    }
+
+    .message {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #8b5cf6;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 12px;
+      display: none;
+      font-weight: bold;
+      z-index: 20;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">ADVENTURE<span>.</span></div>
+  <button class="cart" onclick="mostrarCarrinho()">
+    🛒 Carrinho (<span id="quantidade">0</span>)
+  </button>
+</header>
+
+<section class="hero">
+  <h1>ADVENTURE <span>STREETWEAR</span></h1>
+  <p>Vista sua atitude. Viva sua aventura.</p>
+</section>
+
+<section class="products">
+  <h2>🔥 Nossa coleção</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="shirt">👕</div>
+      <div class="card-content">
+        <h3>Eclipse</h3>
+        <p>Camiseta streetwear preta e roxa.</p>
+        <div class="price">R$ 89,90</div>
+        <button class="buy" onclick="comprar('Eclipse')">
+          Comprar
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="shirt">👕</div>
+      <div class="card-content">
+        <h3>Aura</h3>
+        <p>Camiseta oversized preta com detalhes roxos.</p>
+        <div class="price">R$ 99,90</div>
+        <button class="buy" onclick="comprar('Aura')">
+          Comprar
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="shirt">👕</div>
+      <div class="card-content">
+        <h3>Element</h3>
+        <p>Modelo urbano exclusivo Adventure.</p>
+        <div class="price">R$ 94,90</div>
+        <button class="buy" onclick="comprar('Element')">
+          Comprar
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="shirt">👕</div>
+      <div class="card-content">
+        <h3>Phantom</h3>
+        <p>Design escuro para completar seu estilo.</p>
+        <div class="price">R$ 109,90</div>
+        <button class="buy" onclick="comprar('Phantom')">
+          Comprar
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="shirt">👕</div>
+      <div class="card-content">
+        <h3>Shadow</h3>
+        <p>Camiseta preta com identidade roxa.</p>
+        <div class="price">R$ 99,90</div>
+        <button class="buy" onclick="comprar('Shadow')">
+          Comprar
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Adventure Streetwear</p>
+  <p>Feito para quem vive a própria aventura.</p>
+</footer>
+
+<div class="message" id="message"></div>
+
+<script>
+  let quantidade = 0;
+
+  function comprar(produto) {
+    quantidade++;
+    document.getElementById("quantidade").innerText = quantidade;
+
+    const message = document.getElementById("message");
+    message.innerText = produto + " adicionado ao carrinho!";
+    message.style.display = "block";
+
+    setTimeout(() => {
+      message.style.display = "none";
+    }, 2000);
+  }
+
+  function mostrarCarrinho() {
+    if (quantidade === 0) {
+      alert("Seu carrinho está vazio.");
+    } else {
+      alert("Você tem " + quantidade + " produto(s) no carrinho.");
+    }
+  }
+</script>
+
+</body>
+</html>
