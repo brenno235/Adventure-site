@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adventure Streetwear</title>
-
   <style>
     * {
       margin: 0;
@@ -12,12 +11,10 @@
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
     }
-
     body {
       background: #09090b;
       color: white;
     }
-
     header {
       padding: 25px 7%;
       display: flex;
@@ -29,17 +26,14 @@
       background: rgba(9,9,11,0.95);
       z-index: 10;
     }
-
     .logo {
       font-size: 25px;
       font-weight: 900;
       letter-spacing: 2px;
     }
-
     .logo span {
       color: #8b5cf6;
     }
-
     .cart {
       background: #8b5cf6;
       border: none;
@@ -49,43 +43,35 @@
       font-weight: bold;
       cursor: pointer;
     }
-
     .hero {
       text-align: center;
       padding: 80px 20px;
       background: linear-gradient(135deg, #09090b, #1b102b);
     }
-
     .hero h1 {
       font-size: clamp(42px, 9vw, 80px);
       font-weight: 900;
     }
-
     .hero h1 span {
       color: #8b5cf6;
     }
-
     .hero p {
       margin-top: 15px;
       color: #a1a1aa;
       font-size: 18px;
     }
-
     .products {
       padding: 50px 7%;
     }
-
     .products h2 {
       font-size: 32px;
       margin-bottom: 30px;
     }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 25px;
     }
-
     .card {
       background: #141417;
       border: 1px solid #27272a;
@@ -93,12 +79,10 @@
       overflow: hidden;
       transition: 0.3s;
     }
-
     .card:hover {
       transform: translateY(-5px);
       border-color: #8b5cf6;
     }
-
     .shirt {
       height: 280px;
       display: flex;
@@ -107,64 +91,45 @@
       background: linear-gradient(145deg, #18181b, #24143d);
       font-size: 80px;
     }
-
     .card-content {
       padding: 20px;
     }
-
     .card h3 {
       font-size: 21px;
       margin-bottom: 8px;
     }
-
     .card p {
       color: #a1a1aa;
       margin-bottom: 15px;
     }
-
     .price {
       font-size: 22px;
       font-weight: bold;
       margin-bottom: 15px;
     }
-    
-.buy {
-  display: block;
-  width: 100%;
-  padding: 13px;
-  border: none;
-  border-radius: 10px;
-  background: #8b5cf6;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-}
-
-.buy:hover {
-  background: #7c3aed;
-}
-      
-      .buy {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-}
+    .buy {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 10px;
+      background: #8b5cf6;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
     }
-
     .buy:hover {
       background: #7c3aed;
     }
-
     footer {
       text-align: center;
       padding: 40px 20px;
       border-top: 1px solid #27272a;
       color: #71717a;
     }
-
     .message {
       position: fixed;
       bottom: 25px;
@@ -180,42 +145,37 @@
     }
   </style>
 </head>
-
 <body>
-
 <header>
   <div class="logo">ADVENTURE<span>.</span></div>
   <button class="cart" onclick="mostrarCarrinho()">
     🛒 Carrinho (<span id="quantidade">0</span>)
   </button>
 </header>
-
 <section class="hero">
   <h1>ADVENTURE <span>STREETWEAR</span></h1>
   <p>Vista sua atitude. Viva sua aventura.</p>
 </section>
-
 <section class="products">
   <h2>🔥 Nossa coleção</h2>
-
   <div class="grid">
-
-    <<div class="card">
-  <div class="shirt">👕</div>
-  <div class="card-content">
-    <h3>Eclipse</h3>
-    <p>Camiseta streetwear preta e roxa.</p>
-    <div class="price">R$ 300,00</div>
-    <a class="buy" href="https://mpago.la/2kkkpwJ" target="_blank">
-      Comprar
-    </a>
-  </div>
-</div>
+    <!-- ECLIPSE -->
+    <div class="card">
+      <div class="shirt">👕</div>
+      <div class="card-content">
+        <h3>Eclipse</h3>
+        <p>Camiseta streetwear preta e roxa.</p>
+        <div class="price">R$ 300,00</div>
+        <a
+          class="buy"
+          href="https://mpago.la/2kkkpwJ"
+          target="_blank"
+        >
           Comprar
-        </button>
+        </a>
       </div>
     </div>
-
+    <!-- AURA -->
     <div class="card">
       <div class="shirt">👕</div>
       <div class="card-content">
@@ -227,7 +187,7 @@
         </button>
       </div>
     </div>
-
+    <!-- ELEMENT -->
     <div class="card">
       <div class="shirt">👕</div>
       <div class="card-content">
@@ -239,7 +199,7 @@
         </button>
       </div>
     </div>
-
+    <!-- PHANTOM -->
     <div class="card">
       <div class="shirt">👕</div>
       <div class="card-content">
@@ -251,7 +211,7 @@
         </button>
       </div>
     </div>
-
+    <!-- SHADOW -->
     <div class="card">
       <div class="shirt">👕</div>
       <div class="card-content">
@@ -263,41 +223,39 @@
         </button>
       </div>
     </div>
-
   </div>
 </section>
-
 <footer>
   <p>© 2026 Adventure Streetwear</p>
   <p>Feito para quem vive a própria aventura.</p>
 </footer>
-
 <div class="message" id="message"></div>
-
 <script>
   let quantidade = 0;
-
   function comprar(produto) {
     quantidade++;
     document.getElementById("quantidade").innerText = quantidade;
-
     const message = document.getElementById("message");
     message.innerText = produto + " adicionado ao carrinho!";
     message.style.display = "block";
-
     setTimeout(() => {
       message.style.display = "none";
     }, 2000);
   }
-
   function mostrarCarrinho() {
     if (quantidade === 0) {
       alert("Seu carrinho está vazio.");
     } else {
-      alert("Você tem " + quantidade + " produto(s) no carrinho.");
+      alert(
+        "Você tem " +
+        quantidade +
+        " produto(s) no carrinho."
+      );
     }
   }
 </script>
-
 </body>
 </html>
+
+    
+  
